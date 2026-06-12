@@ -68,20 +68,8 @@ Keys: `i` idle · `m` contact make · `b` contact break · `s` slip · `t` tap �
 
 ### 3. Train
 Open `train.ipynb` to run the full training pipeline:
-- FP32 baseline → INT8 PTQ → INT8 QAT → INT8 pruned
 - Exports `.tflite` models to `models/`
 
-### 4. Run inference
-```bash
-uv run probe.py /dev/ttyACM0
-```
-
-### 5. ROS 2 bridge (optional)
-Bridges serial frames to `/tinytouch/raw` without flashing microROS firmware:
-```bash
-source /opt/ros/$ROS_DISTRO/setup.bash
-python3 ros_bridge.py /dev/ttyACM0
-```
 
 ---
 
@@ -91,8 +79,3 @@ python3 ros_bridge.py /dev/ttyACM0
 
 ---
 
-## Model targets
-
-- ≥ 92% slip detection accuracy  
-- < 500 KB flash / < 100 KB RAM  
-- < 10 ms sense → publish latency
