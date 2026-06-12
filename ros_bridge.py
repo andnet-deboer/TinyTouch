@@ -5,8 +5,8 @@ TinyTouch serial→ROS2 bridge.
 Reads the MODE_SERIAL binary frames from the ESP32-S3 and publishes
 Float32MultiArray on /tinytouch/raw at ~50 Hz.
 
-Usage (source jazzy first):
-    source /opt/ros/jazzy/setup.bash
+Usage (source Ros 2 workspace first):
+    source /opt/ros/$ROS_DISTRO/setup.bash
     python3 ros_bridge.py [/dev/ttyACM0]
 
 Message layout: 40 floats, 10 sensors × 4 values each (t, x, y, z),
