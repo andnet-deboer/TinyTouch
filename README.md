@@ -5,6 +5,8 @@
 
 TinyTouch is a low-cost tactile sensing system built around magnetic Hall-effect sensors. It reads 3-axis magnetic field data from an array of sensors, classifies touch events (contact, slip, tap) using a quantized CNN, and publishes results over serial or ROS 2.
 
+This project directly builds upon the hardware from ([eFlesh](https://github.com/notvenky/eFlesh))
+
 ---
 
 ## Hardware
@@ -78,4 +80,18 @@ Open `train.ipynb` to run the full training pipeline:
 `idle` · `contact_make` · `contact_break` · `slip` · `tap`
 
 ---
+
+## Citations
+
+If you use this project, please also cite the works it builds on:
+
+**eFlesh**
+```bibtex
+@article{pattabiraman2025eflesh,
+    title={eFlesh: Highly customizable Magnetic Touch Sensing using Cut-Cell Microstructures},
+    author={Venkatesh Pattabiraman and Zizhou Huang and Daniele Panozzo and Denis Zorin and Lerrel Pinto and Raunaq Bhirangi},
+    journal={arXiv preprint arXiv:2506.09994},
+    year={2025}
+}
+```
 
